@@ -15,8 +15,12 @@
  */
 package com.example.android.miwok;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.NumberPicker;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,5 +30,21 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
+
+        setupListener(findViewById(R.id.numbers), NumbersActivity.class);
+        setupListener(findViewById(R.id.phrases), PhrasesActivity.class);
+        setupListener(findViewById(R.id.family), FamilyActivity.class);
+        setupListener(findViewById(R.id.colors), ColorsActivity.class);
+    }
+
+    public void setupListener(View view, final Class cls) {
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //http://www.vogella.com/tutorials/AndroidIntent/article.html#starting-activities-or-services
+                Intent intent = new Intent(MainActivity.this, cls);
+                startActivity(intent);
+            }
+        });
     }
 }
