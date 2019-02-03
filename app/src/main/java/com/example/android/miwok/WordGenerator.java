@@ -8,10 +8,10 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class WordGenerator {
-    static public void populateView(AppCompatActivity activity, int viewId, int[] defaultIdList, int[] miwokIdLists) {
+    static public void populateView(AppCompatActivity activity, int[] defaultIdList, int[] miwokIdLists) {
         ArrayList<Word> words = new ArrayList<>();
         for (int i=0; i<defaultIdList.length; i++) words.add(new Word(activity, defaultIdList[i], miwokIdLists[i]));
-        ListView rootView = (ListView) activity.findViewById(viewId);
+        ListView rootView = (ListView) activity.findViewById(R.id.rootView);
         rootView.setAdapter(new WordAdapter(activity, words));
     }
 }

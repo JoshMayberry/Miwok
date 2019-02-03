@@ -10,7 +10,7 @@ public class PhrasesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_phrases);
-        WordGenerator.populateView(this, R.id.rootPhrases, defaultIdList, miwokIdList);
+        setContentView(R.layout.word_list);
+        WordGenerator.populateView(this, defaultIdList, miwokIdList);
     }
 }

@@ -10,7 +10,7 @@ public class ColorsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_colors);
-        WordGenerator.populateView(this, R.id.rootColors, defaultIdList, miwokIdList);
+        setContentView(R.layout.word_list);
+        WordGenerator.populateView(this, defaultIdList, miwokIdList);
     }
 }
