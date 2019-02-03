@@ -11,42 +11,13 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class NumbersActivity extends AppCompatActivity {
+    int[] defaultIdList = {R.string.word_default_number_1, R.string.word_default_number_2, R.string.word_default_number_3, R.string.word_default_number_4, R.string.word_default_number_5, R.string.word_default_number_6, R.string.word_default_number_7, R.string.word_default_number_8, R.string.word_default_number_9, R.string.word_default_number_10};
+    int[] miwokIdList = {R.string.word_miwok_number_1, R.string.word_miwok_number_2, R.string.word_miwok_number_3, R.string.word_miwok_number_4, R.string.word_miwok_number_5, R.string.word_miwok_number_6, R.string.word_miwok_number_7, R.string.word_miwok_number_8, R.string.word_miwok_number_9, R.string.word_miwok_number_10};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
-
-        ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("one", "lutti"));
-        words.add(new Word("two", "otiiko"));
-        words.add(new Word("three", "tolookosu"));
-        words.add(new Word("four", "oyyisa"));
-        words.add(new Word("five", "massokka"));
-        words.add(new Word("six", "temokka"));
-        words.add(new Word("seven", "kenekaku"));
-        words.add(new Word("eight", "kawinta"));
-        words.add(new Word("nine", "wo'e"));
-        words.add(new Word("ten", "na'aacha"));
-
-        // Log.v("NumbersActivity", "The words at index 0 is: " + words.get(0));
-
-        ListView rootView = (ListView) findViewById(R.id.rootView);
-
-        //Use an adapter to decrease memory usage
-//        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, words);
-        WordAdapter itemsAdapter = new WordAdapter(this, words);
-        rootView.setAdapter(itemsAdapter);
-
-
-
-        /*
-        for (String word: words) {
-            TextView wordView = new TextView(this);
-            wordView.setText(word);
-            rootView.addView(wordView);
-        }
-        */
-
+        WordGenerator.populateView(this, R.id.rootNumbers, defaultIdList, miwokIdList);
     }
 }

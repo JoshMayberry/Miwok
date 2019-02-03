@@ -16,16 +16,99 @@
     <!-- Title for the application. [CHAR LIMIT=12] -->
     <string name="app_name">Miwok</string>
 
-    <!-- Category name for phrases [CHAR LIMIT=20] -->
+    <!-- Category name for sections [CHAR LIMIT=20] -->
     <string name="category_phrases">Phrases</string>
-
-    <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
     <string name="category_colors">Colors</string>
-
-    <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
     <string name="category_numbers">Numbers</string>
-
-    <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
     <string name="category_family">Family Members</string>
-    <string name="error">N/A</string>
+
+    <!-- Default language words -->
+    <string name="word_default_number_1">one</string>
+    <string name="word_default_number_2">two</string>
+    <string name="word_default_number_3">three</string>
+    <string name="word_default_number_4">four</string>
+    <string name="word_default_number_5">five</string>
+    <string name="word_default_number_6">six</string>
+    <string name="word_default_number_7">seven</string>
+    <string name="word_default_number_8">eight</string>
+    <string name="word_default_number_9">nine</string>
+    <string name="word_default_number_10">ten</string>
+
+    <string name="word_default_color_1">red</string>
+    <string name="word_default_color_2">green</string>
+    <string name="word_default_color_3">brown</string>
+    <string name="word_default_color_4">gray</string>
+    <string name="word_default_color_5">black</string>
+    <string name="word_default_color_6">white</string>
+    <string name="word_default_color_7">dusty yellow</string>
+    <string name="word_default_color_8">mustard yellow</string>
+
+    <string name="word_default_family_1">father</string>
+    <string name="word_default_family_2">mother</string>
+    <string name="word_default_family_3">son</string>
+    <string name="word_default_family_4">daughter</string>
+    <string name="word_default_family_5">older brother</string>
+    <string name="word_default_family_6">younger brother</string>
+    <string name="word_default_family_7">older sister</string>
+    <string name="word_default_family_8">younger sister</string>
+    <string name="word_default_family_9">grandmother</string>
+    <string name="word_default_family_10">grandfather</string>
+
+    <string name="word_default_phrase_1">Where are you going?</string>
+    <string name="word_default_phrase_2">What is your name?</string>
+    <string name="word_default_phrase_3">My name is…</string>
+    <string name="word_default_phrase_4">How are you feeling?</string>
+    <string name="word_default_phrase_5">I’m feeling good.</string>
+    <string name="word_default_phrase_6">Are you coming?</string>
+    <string name="word_default_phrase_7">Yes, I’m coming.</string>
+    <string name="word_default_phrase_8">I’m coming.</string>
+    <string name="word_default_phrase_9">Let’s go.</string>
+    <string name="word_default_phrase_10">Come here.</string>
+
+    <!-- Miwok words -->
+    <!-- Words from: https://docs.google.com/document/d/16sQ-0r5zMrdRXUwOaYbTLNXADasuSYFpy7K0Bn8oVfg/pub?embedded=true -->
+    <string name="word_miwok_number_1">lutti</string>
+    <string name="word_miwok_number_2">otiiko</string>
+    <string name="word_miwok_number_3">tolookosu</string>
+    <string name="word_miwok_number_4">oyyisa</string>
+    <string name="word_miwok_number_5">massokka</string>
+    <string name="word_miwok_number_6">temmokka</string>
+    <string name="word_miwok_number_7">kenekaku</string>
+    <string name="word_miwok_number_8">kawinta</string>
+    <string name="word_miwok_number_9">wo’e</string>
+    <string name="word_miwok_number_10">na’aacha</string>
+
+    <string name="word_miwok_color_1">weṭeṭṭi</string>
+    <string name="word_miwok_color_2">chokokki</string>
+    <string name="word_miwok_color_3">ṭakaakki</string>
+    <string name="word_miwok_color_4">ṭopoppi</string>
+    <string name="word_miwok_color_5">kululli</string>
+    <string name="word_miwok_color_6">kelelli</string>
+    <string name="word_miwok_color_7">ṭopiisә</string>
+    <string name="word_miwok_color_8">chiwiiṭә</string>
+
+    <string name="word_miwok_family_1">әpә</string>
+    <string name="word_miwok_family_2">әṭa</string>
+    <string name="word_miwok_family_3">angsi</string>
+    <string name="word_miwok_family_4">tune</string>
+    <string name="word_miwok_family_5">taachi</string>
+    <string name="word_miwok_family_6">chalitti</string>
+    <string name="word_miwok_family_7">teṭe</string>
+    <string name="word_miwok_family_8">kolliti</string>
+    <string name="word_miwok_family_9">ama</string>
+    <string name="word_miwok_family_10">paapa</string>
+
+    <string name="word_miwok_phrase_1">minto wuksus</string>
+    <string name="word_miwok_phrase_2">tinnә oyaase\'nә</string>
+    <string name="word_miwok_phrase_3">oyaaset…</string>
+    <string name="word_miwok_phrase_4">michәksәs?</string>
+    <string name="word_miwok_phrase_5">kuchi achit</string>
+    <string name="word_miwok_phrase_6">әәnәs\'aa?</string>
+    <string name="word_miwok_phrase_7">hәә’ әәnәm</string>
+    <string name="word_miwok_phrase_8">әәnәm</string>
+    <string name="word_miwok_phrase_9">yoowutis</string>
+    <string name="word_miwok_phrase_10">әnni\'nem</string>
+
+
+
 </resources>
