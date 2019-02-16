@@ -11,6 +11,6 @@ public class PhrasesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
-        WordGenerator.populateView(this, defaultIdList, miwokIdList);
+        new WordGenerator(this).populateView(defaultIdList, miwokIdList);
     }
 }

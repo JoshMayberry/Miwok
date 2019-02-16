@@ -12,6 +12,6 @@ public class FamilyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
-        WordGenerator.populateView(this, defaultIdList, miwokIdList, imageIdList);
+        new WordGenerator(this).populateView(defaultIdList, miwokIdList, imageIdList);
     }
 }
