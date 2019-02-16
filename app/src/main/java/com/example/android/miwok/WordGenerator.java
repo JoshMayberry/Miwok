@@ -14,5 +14,11 @@ public class WordGenerator {
         ListView rootView = (ListView) activity.findViewById(R.id.rootView);
         rootView.setAdapter(new WordAdapter(activity, words));
     }
+    static public void populateView(AppCompatActivity activity, int[] defaultIdList, int[] miwokIdLists, int[] imageIdList) {
+        ArrayList<Word> words = new ArrayList<>();
+        for (int i=0; i<defaultIdList.length; i++) words.add(new Word(activity, defaultIdList[i], miwokIdLists[i], imageIdList[i]));
+        ListView rootView = (ListView) activity.findViewById(R.id.rootView);
+        rootView.setAdapter(new WordAdapter(activity, words));
+    }
 }
 
