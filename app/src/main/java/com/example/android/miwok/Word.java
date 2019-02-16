@@ -6,11 +6,23 @@ class Word {
     private AppCompatActivity mActivity;
     private String mDefaultTranslation;
     private String mMiwokTranslation;
+    private int mSoundId;
     private int mImageId = NO_IMAGE_PROVIDED;
-    private static final int NO_IMAGE_PROVIDED = -1;
+    public static final int NO_IMAGE_PROVIDED = -1;
 
     Word(AppCompatActivity activity) {
         mActivity = activity;
+    }
+
+    @Override
+    public String toString() {
+        return "Word{" +
+                "mActivity=" + mActivity +
+                ", mDefaultTranslation='" + mDefaultTranslation + '\'' +
+                ", mMiwokTranslation='" + mMiwokTranslation + '\'' +
+                ", mSoundId=" + mSoundId +
+                ", mImageId=" + mImageId +
+                '}';
     }
 
     //Setters
@@ -37,6 +49,11 @@ class Word {
         return this;
     }
 
+    Word setSoundId(int soundId) {
+        this.mSoundId = soundId;
+        return this;
+    }
+
     //Getters
     String getDefaultTranslation() {
         return this.mDefaultTranslation;
@@ -48,6 +65,10 @@ class Word {
 
     int getImageId() {
         return this.mImageId;
+    }
+
+    int getSoundId() {
+        return this.mSoundId;
     }
 
     boolean hasImage() {

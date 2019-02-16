@@ -16,8 +16,11 @@ import java.util.List;
 
 //Modified code from: https://github.com/udacity/ud839_CustomAdapter_Example/blob/master/app/src/main/java/com/example/android/flavor/AndroidFlavorAdapter.java
 public class WordAdapter extends ArrayAdapter<Word> {
-    public WordAdapter(@NonNull Context context, @NonNull List<Word> objects) {
+    int mColorId;
+
+    public WordAdapter(@NonNull Context context, @NonNull List<Word> objects, int colorId) {
         super(context, 0, objects);
+        mColorId = colorId;
     }
 
     @NonNull
@@ -47,16 +50,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
         }
 
         //Change Background
-        //Use: https://stackoverflow.com/questions/17277618/get-color-value-programmatically-when-its-a-reference-theme/17277714#17277714
-        //See: https://developer.android.com/reference/android/content/res/Resources.Theme#resolveAttribute(int,%20android.util.TypedValue,%20boolean)
         View view_background = view.findViewById(R.id.word_section);
-        Resources.Theme myTheme = getContext().getTheme();
-        TypedValue typedValue = new TypedValue();
-
-        if (!(myTheme.resolveAttribute(R.attr.colorPrimary, typedValue, true))) {
-            typedValue.data = R.color.primary_color;
-        }
-        view_background.setBackgroundColor(typedValue.data);
+        view_background.setBackgroundResource(mColorId);
 
         return view;
     }
