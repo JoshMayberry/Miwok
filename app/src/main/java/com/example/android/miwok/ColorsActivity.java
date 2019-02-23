@@ -14,6 +14,12 @@ public class ColorsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //See: https://developer.android.com/training/design-navigation/ancestral-temporal.html
+        //See: https://developer.android.com/training/design-navigation/screen-planning.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#diagram-relationships
+        //Use: https://developer.android.com/training/implementing-navigation/ancestral.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#up
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         setContentView(R.layout.word_list);
         mWordGenerator = new WordGenerator(this)
                 .setDefaultIdList(defaultIdList)
