@@ -1,5 +1,6 @@
 package com.example.android.miwok;
 
+import android.app.Fragment;
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -19,14 +20,16 @@ class WordGenerator {
     private int[] mImageIdList;
     private int mColorId;
 
+    private WordFragment mFragment;
     private AppCompatActivity mActivity;
     private AudioManager mAudioManager;
     private MediaPlayer mMediaPlayer;
 
-    WordGenerator(AppCompatActivity activity) {
+    WordGenerator(WordFragment fragment, AppCompatActivity activity) {
         //Use: https://developer.android.com/guide/topics/media-apps/audio-focus#audio_focus_pre-android_80
         mAudioManager = (AudioManager) activity.getSystemService(Context.AUDIO_SERVICE);
         mActivity = activity;
+        mFragment = fragment;
     }
 
     WordGenerator setDefaultIdList(int[] textId) {
@@ -54,7 +57,7 @@ class WordGenerator {
         return this;
     }
 
-    void populateView() {
+    void populateView(ListView rootView) {
         //Populate Words
         final ArrayList<Word> words = new ArrayList<>();
         for (int i = 0; i < mDefaultIdList.length; i++) {
@@ -62,19 +65,19 @@ class WordGenerator {
                     .setDefaultTranslation(mDefaultIdList[i])
                     .setMiwokTranslation(mMiwokIdList[i])
                     .setSoundId(mSoundIdList[i]);
-            if (mImageIdList != null) {
+            if (mImageIdList.length != 0) {
                 newWord.setImageId(mImageIdList[i]);
             }
             words.add(newWord);
         }
 
         //Apply Words
-        ListView rootView = (ListView) mActivity.findViewById(R.id.rootView);
-        rootView.setAdapter(new WordAdapter(mActivity, words, mColorId));
+        ListView listView = (ListView) rootView.findViewById(R.id.rootView);
+        listView.setAdapter(new WordAdapter(mActivity, words, mColorId));
 
         //Apply Audio
         releaseMediaPlayer();
-        rootView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long index) {
                 if (requestAudioService()) {
